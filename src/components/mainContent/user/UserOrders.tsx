@@ -15,7 +15,7 @@ const UserOrders: React.FC = () => {
       }
 
       try {
-        const response = await fetch("http://localhost:8080/users/orders", {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/users/orders`, {
           method: "GET",
           headers: {
             "content-Type": "application/json",

@@ -10,7 +10,7 @@ const Categories: React.FC = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch("http://localhost:8080/products");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products`);
         if (!response.ok) {
           throw new Error("Error al obtener los productos");
         }

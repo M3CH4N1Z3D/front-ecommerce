@@ -85,7 +85,7 @@ const ProductDetail: React.FC = () => {
       return;
     }
     try {
-      const response = await fetch("http://localhost:8080/orders", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/orders`, {
         method: "POST",
         headers: {
           "content-Type": "application/json",

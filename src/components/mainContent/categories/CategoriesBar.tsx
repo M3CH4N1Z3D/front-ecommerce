@@ -4,7 +4,7 @@ import Skeleton from "@/components/Skeleton";
 import Link from "next/link";
 
 async function fetchCategories() {
-  const response = await fetch("http://localhost:8080/categories");
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`);
   if (!response.ok) {
     throw new Error("Error al obtener las categorías");
   }
