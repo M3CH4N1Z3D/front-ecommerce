@@ -11,13 +11,12 @@ const Banner: React.FC = () => {
   const id = productos[currentIndex]?.id;
 
   useEffect(() => {
-    if (typeof window! == "undefined") {
+    
       const storedProducts = localStorage.getItem("products");
       if (storedProducts) {
         setProductos(JSON.parse(storedProducts));
       }
-    }
-  }, []);
+    }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
